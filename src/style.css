@@ -3,9 +3,37 @@
     /* background-color: black; */
 }
 
+#center{
+    
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .text-area{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
     background-color: #f2f2f2;
     resize: none;
     width: 450px;
     height: 80px;
+    border: none;
+}
+
+.offset-area{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    background-color: #f2f2f2;
+    width: 250px;
+    height: 50;
+    border: none;
+}
+
+.buttons{
+    text-align: center;
+
 }

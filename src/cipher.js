@@ -1,4 +1,18 @@
 window.cipher = {
+    clickEncode: function(){
+        let encodeText = document.getElementById('textarea').value; 
+        let offsetSize = document.getElementById('offset').value;
+        let result = window.cipher.encode(offsetSize,encodeText);  
+        document.getElementById('resultcipher').innerHTML = result;
+    },
+
+    clickDecode: function(){
+        let encodeText = document.getElementById('textarea').value; 
+        let offsetSize = document.getElementById('offset').value;
+        let result = window.cipher.decode(offsetSize,encodeText);  
+        document.getElementById('resultcipher').innerHTML = result;
+    },
+
     encode: function (offPosition, str){
         let strSeparet = str.split('');
         let strAscii = '';
@@ -36,3 +50,9 @@ window.cipher = {
     }
      
   };
+
+
+function resultText(){
+    let resultLocal = document.getElementById('resulttext');
+    resultLocal.innerHTML = resultText;
+}
