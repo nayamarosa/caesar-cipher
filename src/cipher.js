@@ -4,15 +4,19 @@ window.cipher = {
         let offsetSize = document.getElementById('offset').value;
         let result = window.cipher.encode(offsetSize,encodeText);  
         document.getElementById('resultcipher').innerHTML = result;
+        let modal = document.getElementById('modal-rtn')
+        modal.style.display = 'block';
     },
-
+    
     clickDecode: function(){
         let encodeText = document.getElementById('textarea').value; 
         let offsetSize = document.getElementById('offset').value;
         let result = window.cipher.decode(offsetSize,encodeText);  
         document.getElementById('resultcipher').innerHTML = result;
+        let modal = document.getElementById('modal-rtn')
+        modal.style.display = 'block';
     },
-
+    
     encode: function (offPosition, str){
         let strSeparet = str.split('');
         let strAscii = '';
@@ -48,11 +52,18 @@ window.cipher = {
         }
         return strAscii;
     }
-     
-  };
+};
 
 
-function resultText(){
-    let resultLocal = document.getElementById('resulttext');
-    resultLocal.innerHTML = resultText;
+// function resultText(){
+//     let resultLocal = document.getElementById('resulttext');
+//     resultLocal.innerHTML = resultText;
+// }
+
+function modal(){
+    let modal = document.getElementById('modal-rtn');
+}
+
+let onClickModal = function(){
+    modal.style.display = 'block';
 }

@@ -78,3 +78,22 @@
 .final-msg{
     color: #BDBDB4;
 }
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding: 30px;
+    top: 50%;
+    width: 390px;
+    height: 140px;
+    background-color: #BDBDB4;
+}
+
+.modal-content {
+    background-color: #BDBDB4;
+    margin: auto;
+    padding: 20px;
+    /* border: 1px solid #888; */
+    width: 80%;
+}
