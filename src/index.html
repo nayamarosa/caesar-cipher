@@ -6,13 +6,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="center">
+      <img src="images/logo-acme.png">
+    </div>
     <div>
-      <textarea id="textarea" class="text-area" name="textcipher" maxlength='250' placeholder='Escreva sua mensagem'></textarea>
+      <textarea id="textarea" class="text-area" name="textcipher" maxlength='200' placeholder='Escreva sua mensagem'></textarea>
       <input id="offset" class="offset-area" type="text" placeholder="Deslocamento">
     </div> 
-    <div class="buttons">
-      <button onclick="window.cipher.clickEncode()">Codificar</button>
-      <button onclick="window.cipher.clickDecode()">Decodificar</button>
+    <div id="center">
+      <button class="buttons" onclick="window.cipher.clickEncode()">Codificar</button>
+      <button class="buttons" onclick="window.cipher.clickDecode()">Decodificar</button>
     </div>
     <div id="resultcipher"></div>
     <script src="cipher.js"></script>
