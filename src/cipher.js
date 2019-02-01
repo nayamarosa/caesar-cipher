@@ -4,17 +4,56 @@ window.cipher = {
         let offsetSize = document.getElementById('offset').value;
         let result = window.cipher.encode(offsetSize,encodeText);  
         document.getElementById('resultcipher').innerHTML = result;
-        let modal = document.getElementById('modal-rtn')
-        modal.style.display = 'block';
+        let textarea = document.getElementById('textarea');
+        let offset = document.getElementById('offset');
+        if(encodeText === '' && offsetSize === ''){
+            textarea.classList.add('error');
+            offset.classList.add('error');
+        } else if (encodeText === ''){
+            textarea.classList.add('error');
+        } else if (offsetSize === ''){  
+            offset.classList.add('error');
+        } else {
+            let modal = document.getElementById('modal-rtn');
+            modal.style.display = 'block';
+            textarea.classList.remove('error');
+            offset.classList.remove('error');
+        }
     },
     
     clickDecode: function(){
-        let encodeText = document.getElementById('textarea').value; 
+        let decodeText = document.getElementById('textarea').value; 
         let offsetSize = document.getElementById('offset').value;
-        let result = window.cipher.decode(offsetSize,encodeText);  
+        let result = window.cipher.decode(offsetSize,decodeText);  
         document.getElementById('resultcipher').innerHTML = result;
-        let modal = document.getElementById('modal-rtn')
-        modal.style.display = 'block';
+        let textarea = document.getElementById('textarea');
+        let offset = document.getElementById('offset');
+        if(decodeText === '' && offsetSize === ''){
+            textarea.classList.add('error');
+            offset.classList.add('error');
+        } else if (decodeText === ''){
+            textarea.classList.add('error');
+        } else if (offsetSize === ''){  
+            offset.classList.add('error');
+        } else {
+            let modal = document.getElementById('modal-rtn');
+            modal.style.display = 'block';
+            textarea.classList.remove('error');
+            offset.classList.remove('error');
+        }
+    },
+    
+    modalOut: function(){
+        let modal = document.getElementById('modal-rtn');
+        let textarea = document.getElementById('textarea');
+        let offset = document.getElementById('offset');
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                textarea.value = '';
+                offset.value = '';
+            }
+        }
     },
     
     encode: function (offPosition, str){
@@ -54,16 +93,4 @@ window.cipher = {
     }
 };
 
-
-// function resultText(){
-//     let resultLocal = document.getElementById('resulttext');
-//     resultLocal.innerHTML = resultText;
-// }
-
-function modal(){
-    let modal = document.getElementById('modal-rtn');
-}
-
-let onClickModal = function(){
-    modal.style.display = 'block';
-}
+cipher.modalOut();

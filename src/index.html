@@ -11,18 +11,18 @@
       <img src="images/logo-acme.png">
     </div>
     <div>
-      <textarea id="textarea" class="text-area" name="textcipher" maxlength='200' placeholder='ESCREVER MENSAGEM'></textarea>
+      <textarea id="textarea" class="text-area" name="textcipher" maxlength='100' placeholder='ESCREVER MENSAGEM'></textarea>
       <input id="offset" class="offset-area" type="text" placeholder="DESLOCAMENTO">
     </div> 
     <div id="center">
-      <button class="buttons" onclick="window.cipher.clickEncode()">CODIFICAR</button>
-      <button class="buttons" onclick="window.cipher.clickDecode()">DECODIFICAR</button>
-      <div id="modal-rtn" class="modal">
-          <div id="resultcipher"></div>
-      </div>
+      <button class="buttons" onclick="cipher.clickEncode()">CODIFICAR</button>
+      <button class="buttons" onclick="cipher.clickDecode()">DECODIFICAR</button>
     </div>
-    <script src="cipher.js"></script>
-    <script src="tests.js"></script>
   </div>
+  <div id="modal-rtn" class="modal">
+    <div id="resultcipher" class="modal-content"></div>
+  </div>
+  <script src="cipher.js"></script>
+  <script src="tests.js"></script>
 </body>
 </html>

@@ -16,84 +16,81 @@
 
 .text-area{
     display: block;
+    box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    margin-bottom: 20px;
-    padding-top: 5px;
+    padding-top: 30px;
     text-align: center;     
     background-color: #323639;
-    color: #BDBDB4;
-    font-size: 15px;
+    color: #d6d7d7;
     resize: none;
-    width: 450px;
-    height: 55px;
-    border: none;
-    transition: 0.5s linear;
-}
-
-.text-area:hover{
-    color: black;
-    background-color: #BDBDB4;
+    width: 280px;
+    height: 90px;
+    border: 8px solid #d6d7d7;
 }
 
 .offset-area{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 30px;
     margin-bottom: 20px;
     text-align: center;
     background-color: #323639;
-    color: #BDBDB4;
-    font-size: 15px;
-    width: 300px;
-    height: 30px;
-    border: none;
-    transition: 0.5s linear;
-}
-
-.offset-area:hover{
-    color: black;
-    background-color: #BDBDB4;
+    color: #d6d7d7;
+    width: 264px;
+    height: 35px;
+    border: 8px solid #d6d7d7;
 }
 
 .buttons{
     text-align: center;
     background-color: transparent;
-    width: 140px;
+    width: 128px;
     height: 60px;
     margin-right: 10px;
     margin-left: 10px;
-    color: #BDBDB4;
+    color: #d6d7d7;
     font-weight: bold;
-    border: 6px solid #BDBDB4;
+    border: 6px solid #d6d7d7;
     transition: 1s;
 }
 
 .buttons:hover{
     color: black;
-    background-color: #BDBDB4;
-}
-
-.final-msg{
-    color: #BDBDB4;
+    background-color: #d6d7d7;
 }
 
 .modal{
     display: none;
     position: fixed;
     z-index: 1;
-    padding: 30px;
-    top: 50%;
-    width: 390px;
-    height: 140px;
-    background-color: #BDBDB4;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #d6d7d7;
+    background-color: rgba(0,0,0,0.4);
 }
 
-.modal-content {
-    background-color: #BDBDB4;
-    margin: auto;
-    padding: 20px;
-    /* border: 1px solid #888; */
-    width: 80%;
+.modal-content{
+    background-color: #d6d7d7;
+    color: black;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 9px;
+    padding: 65px;
+    width: 280px;
+    height: 172px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.error{
+    border: 8px solid #682E2E
 }
