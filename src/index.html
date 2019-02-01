@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" lang="pt-br">
   <title>Caesar Cipher</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -11,8 +11,8 @@
       <img src="images/logo-acme.png">
     </div>
     <div>
-      <textarea id="textarea" class="text-area" name="textcipher" maxlength='100' placeholder='ESCREVER MENSAGEM'></textarea>
-      <input id="offset" class="offset-area" type="text" placeholder="DESLOCAMENTO">
+      <textarea id="textarea" class="text-area" name="textcipher" maxlength='70' placeholder='ESCREVER MENSAGEM'></textarea>
+      <input id="offset" class="offset-area" type="text" placeholder="DESLOCAMENTO (APENAS NÚMEROS)">
     </div> 
     <div id="center">
       <button class="buttons" onclick="cipher.clickEncode()">CODIFICAR</button>
@@ -21,6 +21,12 @@
   </div>
   <div id="modal-rtn" class="modal">
     <div id="resultcipher" class="modal-content"></div>
+  </div>
+  <div>
+    <img src="images/help.png" class="instructions">
+    <span class="area">ESCREVA SEU TEXTO NA ÁREA DESIGNADA.
+      ESCOLHA O NÚMERO (POSITIVO OU NEGATIVO) DE DESLOCAMENTO 
+      DAS LETRAS PARA CODIFICAR OU DECODIFICAR.</span>
   </div>
   <script src="cipher.js"></script>
   <script src="tests.js"></script>

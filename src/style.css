@@ -55,6 +55,7 @@
     font-weight: bold;
     border: 6px solid #d6d7d7;
     transition: 1s;
+    cursor: pointer;
 }
 
 .buttons:hover{
@@ -74,6 +75,7 @@
     overflow: auto;
     background-color: #d6d7d7;
     background-color: rgba(0,0,0,0.4);
+    /* transition: all 10s */
 }
 
 .modal-content{
@@ -89,6 +91,31 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    /* transition: all 10s */
+}
+
+.instructions{
+    width: 35px;
+}
+
+.instructions + .area{
+    opacity: 0;
+    width: 200px;
+    color: #d6d7d7;
+    border: 2px solid #d6d7d7;
+    text-align: center;
+    font-size: 10px;
+    line-height: 15px;
+    margin-top: 35px;
+    margin-left: -20px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    transition: 1s linear;
+}
+
+.instructions:hover + .area{
+    opacity: 1;
 }
 
 .error{
