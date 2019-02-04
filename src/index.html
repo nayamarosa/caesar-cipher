@@ -12,7 +12,7 @@
     </div>
     <div>
       <textarea id="textarea" class="text-area" name="textcipher" maxlength='70' placeholder='ESCREVER MENSAGEM'></textarea>
-      <input id="offset" class="offset-area" type="text" placeholder="DESLOCAMENTO (APENAS NÚMEROS)">
+      <input id="offset" class="offset-area" type="number" placeholder="DESLOCAMENTO">
     </div> 
     <div id="center">
       <button class="buttons" onclick="cipher.clickEncode()">CODIFICAR</button>
@@ -24,8 +24,8 @@
   </div>
   <div>
     <img src="images/help.png" class="instructions">
-    <span class="area">ESCREVA SEU TEXTO NA ÁREA DESIGNADA.
-      ESCOLHA O NÚMERO (POSITIVO OU NEGATIVO) DE DESLOCAMENTO 
+    <span class="area">ESCREVA SUA MENSAGEM NA ÁREA DESIGNADA.
+      ESCOLHA O NÚMERO DE DESLOCAMENTO 
       DAS LETRAS PARA CODIFICAR OU DECODIFICAR.</span>
   </div>
   <script src="cipher.js"></script>
